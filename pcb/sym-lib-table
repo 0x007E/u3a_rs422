@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "rs422")(type "KiCad")(uri "D:/OneDrive - HTL-Rankweil/Unterrichtsvorbereitung/Übungen/Projekte/USB_UART_UPDI/rs422/pcb/lib/THVD1452D.kicad_sym")(options "")(descr ""))
+)
