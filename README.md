@@ -2,6 +2,8 @@
 
 # `U3A_rs422` - RS422 - Adapter for U3A
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/0x007E/u3a_rs422)
+
 The `U3A_rs422` project is based on a ([THVD1452](#additional-information)) that ist used to change the RX/TX signals to the required differential signal level of TIA/TIA-485-A standard. It can simply be adapted to the [U3A-Module](https://github.com/0x007e/u3a).
 
 > To use it with a [DSUB](https://www.reichelt.de/de/de/shop/produkt/d-sub-stecker_9-pol_flachbandkabel_ohne_isolator-6987) connector it is necessary to create a connector cable that can be plugged into the IDC connector.
