@@ -691,14 +691,8 @@
         },
         {
           "group_by": false,
-          "label": "VendorId",
-          "name": "VendorId",
-          "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Vendor",
-          "name": "Vendor",
+          "label": "HTL",
+          "name": "HTL",
           "show": true
         },
         {
