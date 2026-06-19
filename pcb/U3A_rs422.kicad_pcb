@@ -319,7 +319,7 @@
 			)
 		)
 		(property "Value" "120"
-			(at 0 1.82 0)
+			(at -0.0107 -1.8288 0)
 			(layer "F.Fab")
 			(uuid "8b82072b-7856-482e-8589-bdeacd2d7707")
 			(effects
@@ -675,7 +675,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 0 1.82 0)
+			(at 0 -1.778 0)
 			(layer "F.Fab")
 			(uuid "7dce4c0b-09e3-46d4-ba5f-ea035de4eff7")
 			(effects
@@ -853,7 +853,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 0 1.85 0)
+			(at 0 -1.6906 0)
 			(layer "F.Fab")
 			(uuid "dc5146d2-7bf2-47d6-8f74-9b10cbcb5d3c")
 			(effects
@@ -1031,7 +1031,7 @@
 			)
 		)
 		(property "Value" "THVD1452DR"
-			(at 0 5.28 90)
+			(at -2.859 0 180)
 			(layer "F.Fab")
 			(uuid "67ee42d4-ae86-40c6-8f68-0edc28e83adc")
 			(effects
@@ -1493,7 +1493,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 0 2.55 90)
+			(at 4.572 0 90)
 			(layer "F.Fab")
 			(uuid "7617cf6e-6a7d-450a-bda3-89169ff65cd4")
 			(effects
@@ -2222,7 +2222,7 @@
 			)
 		)
 		(property "Value" "THVD1452DR"
-			(at 0 5.28 90)
+			(at -3.048 -0.0655 180)
 			(layer "F.Fab")
 			(uuid "036e8df2-f238-4a9f-abe5-6d00252c4627")
 			(effects
