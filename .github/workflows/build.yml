@@ -12,6 +12,7 @@ jobs:
   export-kicad:
     env:
       BaseFileName: "U3A_rs422"
+      Folder: "./pcb"
       SchematicFileExtension: "kicad_sch"
       PCBFileExtension: "kicad_pcb"
       OutputFolder: "./output"
@@ -24,16 +25,16 @@ jobs:
     - name: Prepare output directory
       run: |
         mkdir -p ${{ env.OutputFolder }}
-        cp -r ./pcb ${{ env.OutputFolder }}/kicad
-        cp ./LICENSE.md ${{ env.OutputFolder }}
+        cp -r ${{ env.Folder }} ${{ env.OutputFolder }}/kicad
+        cp ./LICENSE ${{ env.OutputFolder }}
 
     - name: Run KiBOT
-      uses: INTI-CMNB/KiBot@v2_dk7
+      uses: INTI-CMNB/KiBot@v2_k9
       with:
         config: ${{ env.ConfigFilePath }}
         dir: ${{ env.OutputFolder }}
-        schema: "./pcb/${{ env.BaseFileName }}.${{ env.SchematicFileExtension }}"
-        board: "./pcb/${{ env.BaseFileName }}.${{ env.PCBFileExtension }}"
+        schema: "${{ env.Folder }}/${{ env.BaseFileName }}.${{ env.SchematicFileExtension }}"
+        board: "${{ env.Folder }}/${{ env.BaseFileName }}.${{ env.PCBFileExtension }}"
 
     - name: Archive artifacts
       uses: actions/upload-artifact@v4
@@ -44,7 +45,7 @@ jobs:
 
   export-freecad:
     env:
-      FREECADVERSION: "1.0.2"
+      FREECADVERSION: "1.1.1"
       FreeCADFileName: "./mechanical/housing.FCStd"
       OutputFolder: "./output"
       PartType: "PartDesign::Body"
@@ -57,13 +58,13 @@ jobs:
       run: |
         mkdir -p ${{ env.OutputFolder }}
         cp -r ./mechanical ${{ env.OutputFolder }}
-        cp ./LICENSE.md ${{ env.OutputFolder }}
+        cp ./LICENSE ${{ env.OutputFolder }}
 
     - name: Install FreeCAD
       run: |
-          wget https://github.com/FreeCAD/FreeCAD/releases/download/${{ env.FREECADVERSION }}/FreeCAD_${{ env.FREECADVERSION }}-conda-Linux-x86_64-py311.AppImage
-          chmod 0777 FreeCAD_${{ env.FREECADVERSION }}-conda-Linux-x86_64-py311.AppImage
-          ./FreeCAD_${{ env.FREECADVERSION }}-conda-Linux-x86_64-py311.AppImage --appimage-extract
+          wget https://github.com/FreeCAD/FreeCAD/releases/download/${{ env.FREECADVERSION }}/FreeCAD_${{ env.FREECADVERSION }}-Linux-x86_64-py311.AppImage
+          chmod 0777 FreeCAD_${{ env.FREECADVERSION }}-Linux-x86_64-py311.AppImage
+          ./FreeCAD_${{ env.FREECADVERSION }}-Linux-x86_64-py311.AppImage --appimage-extract
     - name: Get FreeCAD Export
       run: |
           git clone https://github.com/0x007E/pyfreecadexport.git
