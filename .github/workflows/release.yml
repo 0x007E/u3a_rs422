@@ -94,6 +94,11 @@ jobs:
         draft: false
         prerelease: false
 
+    - name: Install ImageMagick
+      run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
     - name: Download KiCad Artifacts
       uses: actions/download-artifact@v4
       with:
@@ -136,6 +141,21 @@ jobs:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./artifact/kicad/blender/top.png
         asset_name: top.kicad.png
+        asset_content_type: image/png
+    
+    - name: Prepare KiCAD TOP Render Thumbnail
+      run: |
+        mkdir -p thumbnails
+        convert ./artifact/kicad/blender/top.png -resize 200x ./thumbnails/top.thumbnail.png
+
+    - name: Upload KiCAD TOP Render Thumbnail
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./thumbnails/top.thumbnail.png
+        asset_name: top.thumbnail.kicad.png
         asset_content_type: image/png
 
     - name: Upload KiCAD BOTTOM Render
