@@ -20,8 +20,9 @@ The `U3A_rs422` project is based on a ([THVD1452](#additional-information)) that
 | Schematic  | [pdf](https://github.com/0x007E/u3a_rs422/releases/latest/download/schematic.pdf) / [cadlab](https://cadlab.io/project/29767/main/files) | Schematic files |
 | Board      | [pdf](https://github.com/0x007E/u3a_rs422/releases/latest/download/pcb.pdf) / [cadlab](https://cadlab.io/project/29767/main/files) | Board file |
 | Drill      | [pdf](https://github.com/0x007E/u3a_rs422/releases/latest/download/drill.pdf) | Drill file |
-| PCB        | [zip](https://github.com/0x007E/u3a_rs422/releases/latest/download/kicad.zip) / [tar](https://github.com/0x007E/u3a_rs422/releases/latest/download/kicad.tar.gz) | KiCAD/Gerber/BoM/Drill files |
-| Mechanical | [zip](https://github.com/0x007E/u3a_rs422/releases/latest/download/freecad.zip) / [tar](https://github.com/0x007E/u3a_rs422/releases/latest/download/freecad.tar.gz) | FreeCAD/Housing and PCB (STEP) files     |
+| BoM | [xlsx](https://github.com/0x007E/u3a_rs422/releases/latest/download/bom.xlsx) / [html](https://github.com/0x007E/u3a_rs422/releases/latest/download/bom.html)          | Bill of Material as Excel/interactive HTML |
+| PCB    | [zip](https://github.com/0x007E/u3a_rs422/releases/latest/download/kicad.zip) / [tar](https://github.com/0x007E/u3a_rs422/releases/latest/download/kicad.tar.gz)    | KiCAD/Gerber/BoM/Drill files       |
+| Mechanical | [zip](https://github.com/0x007E/u3a_rs422/releases/latest/download/freecad.zip) / [tar](https://github.com/0x007E/u3a_rs422/releases/latest/download/freecad.tar.gz) | FreeCAD/Housing and PCB (STEP/STL) files     |
 
 # Hardware
 
